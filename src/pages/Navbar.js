@@ -7,9 +7,11 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (window.innerWidth <= 768) {
+      setIsMobileMenuOpen(prev => !prev);
+    }
   };
-
+  
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -21,21 +23,20 @@ const Navbar = () => {
       </div>
 
       <ul className={isMobileMenuOpen ? "navbar-links active" : "navbar-links"}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/team">Our Team</Link></li>
-        <li><Link to="/services">Products and Services</Link></li>
-        <li className="dropdown">
-          <span className="dropbtn">Career </span>
-          <span className="dropbtn"> </span>
-          <span className="dropbtn"> </span>
-          <div className="dropdown-content">
-            <Link to="/internships">Internships</Link>
-            <Link to="/scholarships">Scholarships</Link>
-            <Link to="/jobs">Job Openings</Link>
-          </div>
-        </li>
-      </ul>
+  <li><Link to="/" onClick={toggleMobileMenu}>Home</Link></li>
+  <li><Link to="/projects" onClick={toggleMobileMenu}>Projects</Link></li>
+  <li><Link to="/team" onClick={toggleMobileMenu}>Our Team</Link></li>
+  <li><Link to="/services" onClick={toggleMobileMenu}>Products and Services</Link></li>
+  <li className="dropdown">
+    <span className="dropbtn">Career</span>
+    <div className="dropdown-content">
+      <Link to="/internships" onClick={toggleMobileMenu}>Internships</Link>
+      <Link to="/scholarships" onClick={toggleMobileMenu}>Scholarships</Link>
+      <Link to="/jobs" onClick={toggleMobileMenu}>Job Openings</Link>
+    </div>
+  </li>
+</ul>
+
     </nav>
   );
 };
