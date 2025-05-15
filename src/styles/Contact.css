@@ -1,0 +1,128 @@
+/* Base Styles */
+.contact-us-container {
+    padding: 60px 20px;
+    background-color: #908e8e;
+    text-align: center;
+    margin-top: 50px;
+    height: 1000px;
+  }
+  
+  .contact-us-container h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .contact-us-container .subtitle {
+    font-size: 1.6rem;
+    color: #000000;
+    margin-bottom: 40px;
+  }
+  
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 500px;
+  }
+  
+  .contact-info,
+  .map-container {
+    background: rgb(205, 204, 204);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex: 1;
+  }
+  
+  .contact-info h2,
+  .map-container h2 {
+    font-size: 1.8rem;
+    color: #090909;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .info-item i {
+    font-size: 1.2rem;
+    color: #ff6600;
+    margin-right: 15px;
+  }
+  
+  .info-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+  }
+  
+  .map-container iframe {
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .contact-info,
+    .map-container {
+      padding: 20px;
+    }
+  
+    .contact-us-container h1 {
+      font-size: 2rem;
+    }
+  
+    .contact-us-container .subtitle {
+      font-size: 1rem;
+    }
+  
+    .contact-info h2,
+    .map-container h2 {
+      font-size: 1.5rem;
+    }
+  
+    .info-item i {
+      font-size: 1rem;
+    }
+  
+    .info-item p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-us-container h1 {
+      font-size: 1.8rem;
+    }
+  
+    .contact-us-container .subtitle {
+      font-size: 0.9rem;
+    }
+  
+    .contact-info h2,
+    .map-container h2 {
+      font-size: 1.3rem;
+    }
+  
+    .info-item i {
+      font-size: 0.9rem;
+    }
+  
+    .info-item p {
+      font-size: 0.8rem;
+    }
+  }

@@ -1,0 +1,131 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, #003366, #0077b6);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI, sans-serif';
+}
+
+.navbar-logo img {
+  height: 150px;
+  width: auto;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 70px;
+  align-items: center;
+}
+
+.navbar-links li a,
+.navbar-links .dropbtn {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.8rem; /* Increased from 1.3rem */
+  transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover,
+.navbar-links .dropbtn:hover {
+  color: #ffd700;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #003366;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  max-width: 90vw; /* Prevent overflow on mobile */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 999;
+  flex-direction: column;
+  overflow-wrap: break-word;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  color: white;
+  display: block;
+  text-decoration: none;
+  font-size: 1.3rem; /* Match other text */
+}
+
+.dropdown-content a:hover {
+  background-color: #005a8d;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    background-color: #003366;
+    padding: 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    width: 100%; /* Full width on mobile */
+    max-width: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown.open .dropdown-content {
+    display: flex;
+  }
+}
