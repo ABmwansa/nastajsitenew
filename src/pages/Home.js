@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Home.css'; 
 import heroImage from '../assets/2c.jpg'; 
@@ -36,9 +37,9 @@ const Home = () => {
     },
   ];
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
+  }, [slides.length]);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
@@ -51,6 +52,7 @@ const Home = () => {
         nextSlide();
       }
     }, 7000);
+  
     return () => clearInterval(interval);
   }, [isPaused, nextSlide]);
 
