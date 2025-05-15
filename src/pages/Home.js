@@ -69,7 +69,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
         <div className="hero-content">
-          <h1>Building Your Dreams into Reality</h1>
+          <h1 style={{ color: 'white', fontSize: '2rem' }}>Building Your Dreams into Reality</h1>
           <p style={{ color: 'white', fontSize: '2rem' }}>
             Quality construction services tailored to your needs.
           </p>
