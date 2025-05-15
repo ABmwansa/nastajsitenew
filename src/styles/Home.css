@@ -10,6 +10,48 @@ body {
   background-color: #f9f9f9;
   color: #333;
 }
+
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+button, .cta-button, .contact-button, .learn-more-button {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Footer text */
+.footer p, .footer a, .footer li {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.footer h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
 img {
   max-width: 100%;
   display: block;
