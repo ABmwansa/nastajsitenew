@@ -60,22 +60,25 @@ img {
 
 /* Hero Section */
 .hero-section {
-  height: 60vh;
-  background-size: cover;
-  background-position: center;
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  color: white;
-  padding: 0 1rem;
   position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+  margin-top: 200px;
 }
+
 .hero-content {
-  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* optional overlay */
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 8px;
 }
+
 .cta-button {
   margin-top: 1rem;
   padding: 0.75rem 1.5rem;

@@ -26,7 +26,30 @@ const Navbar = () => {
   <li><Link to="/" onClick={toggleMobileMenu}>Home</Link></li>
   <li><Link to="/projects" onClick={toggleMobileMenu}>Projects</Link></li>
   <li><Link to="/team" onClick={toggleMobileMenu}>Our Team</Link></li>
-  <li><Link to="/services" onClick={toggleMobileMenu}>Products and Services</Link></li>
+  <li className="dropdown">
+  <span className="dropbtn">Our Products & Services</span>
+  <div className="dropdown-content-contained">
+    <div className="dropdown-column">
+      <h4>Construction</h4>
+      <Link style={{color:'black'}} to="/fabrication">Fabrication</Link>
+      <Link style={{color:'black'}} to="/tiling">Tiling</Link>
+      <Link style={{color:'black'}} to="/painting">Painting</Link>
+      <Link style={{color:'black'}} to="/cabinet-installations">Cabinet Installations</Link>
+      <Link style={{color:'black'}} to="/scheming">Scheming</Link>
+    </div>
+    <div className="dropdown-column">
+      <h4>Professional</h4>
+      <Link style={{color:'black'}} to="/consultancy">Consultancy</Link>
+      <Link style={{color:'black'}} to="/project-management">Project Management</Link>
+    </div>
+    <div className="dropdown-column">
+      <h4>Testing & Manufacturing</h4>
+      <Link style={{color:'navy-blue'}} to="/manufacturing">Manufacturing</Link>
+      <Link style={{color:'black'}} to="/concrete-testing">Concrete Testing</Link>
+    </div>
+  </div>
+</li>
+
   <li className="dropdown">
     <span className="dropbtn">Career</span>
     <div className="dropdown-content">

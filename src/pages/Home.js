@@ -2,7 +2,9 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Home.css'; 
-import heroImage from '../assets/2c.jpg'; 
+import heroImage1 from '../assets/hero-bg.jpg'; 
+import heroImage2 from '../assets/c.png'; 
+import heroImage3 from '../assets/construction-bg.jpg.jpeg.png'; 
 import commitmentImage from '../assets/commitment.PNG'; 
 import valuesImage from '../assets/imagexii.jpg';
 import missionImage from '../assets/society.jpg'; 
@@ -17,6 +19,8 @@ const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isFormVisible, setIsFormVisible] = useState(false);
+  const heroImages = [heroImage1, heroImage2, heroImage3]; 
+const [currentHero, setCurrentHero] = useState(0);
   const navigate = useNavigate();
 
   const slides = [
@@ -36,7 +40,12 @@ const Home = () => {
       image: missionImage,
     },
   ];
-
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentHero((prev) => (prev + 1) % heroImages.length);
+  }, 3500); 
+  return () => clearInterval(interval);
+}, []);
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   }, [slides.length]);
@@ -51,7 +60,7 @@ const Home = () => {
       if (!isPaused) {
         nextSlide();
       }
-    }, 7000);
+    }, 4000);
   
     return () => clearInterval(interval);
   }, [isPaused, nextSlide]);
@@ -67,15 +76,23 @@ const Home = () => {
   return (
     <div className="home">
       {/* Hero Section */}
-      <section className="hero-section" style={{ backgroundImage: `url(${heroImage})` }}>
-        <div className="hero-content">
-          <h1 style={{ color: 'white', fontSize: '2rem' }}>Building Your Dreams into Reality</h1>
-          <p style={{ color: 'white', fontSize: '2rem' }}>
-            Quality construction services tailored to your needs.
-          </p>
-          <button className="cta-button" onClick={handleClick}>Contact Us</button>
-        </div>
-      </section>
+     <section
+  className="hero-section"
+  style={{
+    backgroundImage: `url(${heroImages[currentHero]})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    transition: 'background-image 1s ease-in-out',
+  }}
+>
+  <div className="hero-content">
+    <h1 style={{ color: 'white', fontSize: '2rem' }}>Building Your Dreams into Reality</h1>
+    <p style={{ color: 'white', fontSize: '2rem' }}>
+      Quality construction services tailored to your needs.
+    </p>
+    <button className="cta-button" onClick={handleClick}>Contact Us</button>
+  </div>
+</section>
 
       {/* About Us Section */}
       <section
