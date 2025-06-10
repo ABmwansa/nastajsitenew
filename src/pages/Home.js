@@ -43,9 +43,10 @@ const [currentHero, setCurrentHero] = useState(0);
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentHero((prev) => (prev + 1) % heroImages.length);
-  }, 3500); 
+  }, 3500);
   return () => clearInterval(interval);
-}, []);
+}, [heroImages.length]);
+
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   }, [slides.length]);
