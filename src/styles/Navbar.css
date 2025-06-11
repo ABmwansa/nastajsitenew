@@ -212,6 +212,8 @@
     flex-direction: column;
     gap: 1.5rem;
     background-color: #002244;
+      max-height: 400px; /* ✅ Limit height on mobile */
+    overflow-y: auto; 
   }
 
   .dropdown-content-contained.show {
