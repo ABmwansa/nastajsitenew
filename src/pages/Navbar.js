@@ -5,19 +5,27 @@ import Logo from '../assets/log.jpg';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-
-   // Handlers for mouse enter and leave
-  const handleMouseEnter = () => setIsHovered(true);
-  const handleMouseLeave = () => setIsHovered(false);
-
 
   const toggleMobileMenu = () => {
     if (window.innerWidth <= 768) {
       setIsMobileMenuOpen(prev => !prev);
     }
   };
-  
+
+  const toggleProductDropdown = () => {
+    if (window.innerWidth <= 768) {
+      setIsProductDropdownOpen(prev => !prev);
+    }
+  };
+
+  const closeMenus = () => {
+    setIsMobileMenuOpen(false);
+    setIsProductDropdownOpen(false);
+    setIsHovered(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">
@@ -29,60 +37,66 @@ const Navbar = () => {
       </div>
 
       <ul className={isMobileMenuOpen ? "navbar-links active" : "navbar-links"}>
-  <li><Link to="/" onClick={toggleMobileMenu}>Home</Link></li>
-  <li><Link to="/projects" onClick={toggleMobileMenu}>Projects</Link></li>
-  <li><Link to="/team" onClick={toggleMobileMenu}>Our Team</Link></li>
-  <li className="dropdown">
-  <span className="dropbtn">Our Products & Services</span>
- <div style={{backgroundColor:'black'}} className="dropdown-content-contained">
-  <div className="dropdown-column">
-    <h4 style={{fontSize:'30px',fontStyle:'bold', color: 'white'}}>Construction</h4>
-    <Link style={{color:'yellowgreen'}} to="/fabrication">Fabrication</Link>
-    <Link style={{color:'yellowgreen'}}  to="/tiling">Tiling</Link>
-    <Link  style={{color:'yellowgreen'}} to="/painting">Painting</Link>
-    <Link style={{color:'yellowgreen'}}  to="/cabinet-installations">Cabinet Installations</Link>
-    <Link style={{color:'yellowgreen'}}  to="/scheming">Scheming</Link>
-  </div>
-  <div className="dropdown-column">
-    <h4 style={{fontSize:'30px',fontStyle:'bold',color: 'white'}}>Professional</h4>
-    <Link style={{color:'yellowgreen'}}  to="/consultancy">Consultancy</Link>
-    <Link style={{color:'yellowgreen'}}  to="/project-management">Project Management</Link>
-  </div>
-  <div className="dropdown-column">
-    <h4 style={{fontSize:'30px', fontStyle:'bold',color: 'white' }}>Testing & Manufacturing</h4>
-    <Link style={{color:'yellowgreen'}}  to="/manufacturing">Manufacturing</Link>
-    <Link style={{color:'yellowgreen'}}  to="/concrete-testing">Concrete Testing</Link>
-  </div>
-</div>
+        <li><Link to="/" onClick={closeMenus}>Home</Link></li>
+        <li><Link to="/projects" onClick={closeMenus}>Projects</Link></li>
+        <li><Link to="/team" onClick={closeMenus}>Our Team</Link></li>
 
-</li>
+        {/* Products & Services Dropdown */}
+        <li className="dropdown">
+          <span className="dropbtn" onClick={toggleProductDropdown}>
+            Our Products & Services
+          </span>
+          <div
+            style={{ backgroundColor: 'black' }}
+            className={`dropdown-content-contained ${isProductDropdownOpen ? 'show' : ''}`}
+          >
+            <div className="dropdown-column">
+              <h4 style={{ fontSize: '30px', fontWeight: 'bold', color: 'white' }}>Construction</h4>
+              <Link style={{ color: 'yellowgreen' }} to="/fabrication" onClick={closeMenus}>Fabrication</Link>
+              <Link style={{ color: 'yellowgreen' }} to="/tiling" onClick={closeMenus}>Tiling</Link>
+              <Link style={{ color: 'yellowgreen' }} to="/painting" onClick={closeMenus}>Painting</Link>
+              <Link style={{ color: 'yellowgreen' }} to="/cabinet-installations" onClick={closeMenus}>Cabinet Installations</Link>
+              <Link style={{ color: 'yellowgreen' }} to="/scheming" onClick={closeMenus}>Scheming</Link>
+            </div>
+            <div className="dropdown-column">
+              <h4 style={{ fontSize: '30px', fontWeight: 'bold', color: 'white' }}>Professional</h4>
+              <Link style={{ color: 'yellowgreen' }} to="/consultancy" onClick={closeMenus}>Consultancy</Link>
+              <Link style={{ color: 'yellowgreen' }} to="/project-management" onClick={closeMenus}>Project Management</Link>
+            </div>
+            <div className="dropdown-column">
+              <h4 style={{ fontSize: '30px', fontWeight: 'bold', color: 'white' }}>Testing & Manufacturing</h4>
+              <Link style={{ color: 'yellowgreen' }} to="/manufacturing" onClick={closeMenus}>Manufacturing</Link>
+              <Link style={{ color: 'yellowgreen' }} to="/concrete-testing" onClick={closeMenus}>Concrete Testing</Link>
+            </div>
+          </div>
+        </li>
 
-    <div
-      className="dropdown"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      style={{ position: 'relative' }}
-    >
-      <span className="dropbtn">Career</span>
-      {isHovered && (
-        <div className="dropdown-content" style={{
-          display: 'block',
-          position: 'absolute',
-          backgroundColor: '#fff',
-          boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
-          zIndex: 1000,
-          top: '100%',
-          left: 0,
-          minWidth: '150px'
-        }}>
-          <Link to="/internships" onClick={() => setIsHovered(false)}>Internships</Link>
-          <Link to="/scholarships" onClick={() => setIsHovered(false)}>Scholarships</Link>
-          <Link to="/jobs" onClick={() => setIsHovered(false)}>Job Openings</Link>
+        {/* Career Dropdown */}
+        <div
+          className="dropdown"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          style={{ position: 'relative' }}
+        >
+          <span className="dropbtn">Career</span>
+          {isHovered && (
+            <div className="dropdown-content" style={{
+              display: 'block',
+              position: 'absolute',
+              backgroundColor: '#fff',
+              boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
+              zIndex: 1000,
+              top: '100%',
+              left: 0,
+              minWidth: '150px'
+            }}>
+              <Link to="/internships" onClick={closeMenus}>Internships</Link>
+              <Link to="/scholarships" onClick={closeMenus}>Scholarships</Link>
+              <Link to="/jobs" onClick={closeMenus}>Job Openings</Link>
+            </div>
+          )}
         </div>
-      )}
-    </div>
-</ul>
-
+      </ul>
     </nav>
   );
 };

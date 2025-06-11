@@ -34,9 +34,10 @@
   gap: 2rem;
   margin: 70px 0 0 0;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Links style */
+/* Link styles */
 .navbar-links li a,
 .navbar-links .dropbtn {
   color: white;
@@ -54,20 +55,38 @@
 /* Dropdown wrapper */
 .dropdown {
   position: relative;
-}
-
-/* Dropdown button */
-.dropbtn {
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  margin: 0 20px;
   cursor: pointer;
-  padding: 14px 20px;
-  font-weight: 600;
-  color: white;
-  background: none;
-  border: none;
-  font-size: 1.8rem;
 }
 
-/* Dropdown content - hidden by default */
+/* Dropdown button styling */
+.dropbtn {
+  display: inline-block;
+  padding: 15px 25px;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: rgb(1, 6, 139);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropbtn:hover {
+  background-color: #024b94;
+  transform: translateY(-2px);
+}
+
+.dropbtn::after {
+  content: ' ▼';
+  font-size: 0.8em;
+}
+
+/* Multi-column dropdown (Products & Services) */
 .dropdown-content-contained {
   display: none;
   position: absolute;
@@ -88,7 +107,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Show dropdown on hover (desktop only) */
+/* Show dropdown on hover for desktop */
 @media (hover: hover) and (pointer: fine) {
   .dropdown:hover .dropdown-content-contained {
     display: flex;
@@ -125,6 +144,39 @@
   transform: translateX(6px);
 }
 
+/* Single-column Career dropdown */
+.dropdown-content {
+  position: absolute;
+  background-color: rgb(1, 4, 30);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  z-index: 1000;
+  top: calc(100% + 5px);
+  left: 0;
+  min-width: 240px;
+  padding: 15px 0;
+  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  height: auto;
+  width: 250px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 25px;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f5f9;
+  color: #3b82f6;
+  padding-left: 30px;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .menu-icon {
@@ -155,7 +207,7 @@
     margin: 10px 0;
   }
 
-  /* Dropdown content becomes relative and full width */
+  /* Responsive dropdown */
   .dropdown-content-contained {
     position: relative;
     width: 100%;
@@ -179,74 +231,21 @@
   .dropdown-column a {
     font-size: 0.95rem;
   }
-}
-/* Dropdown Container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  margin: 0 20px;
-  cursor: pointer;
-}
 
-/* Main Button */
-.dropbtn {
-  display: inline-block;
-  padding: 15px 25px;
-  color: #2c3e50;
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-  background: rgb(1, 6, 139);
-  border: none;
-  cursor: pointer;
-}
+  .dropdown-content {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+    padding: 10px 0;
+  }
 
-.dropbtn:hover {
-  background-color: #024b94;
-  transform: translateY(-2px);
-}
-
-.dropbtn::after {
-  content: '▼';
-  margin-left: 8px;
-  font-size: 0.8em;
-}
-
-/* Dropdown Content */
-.dropdown-content {
-  position: absolute;
-  background-color: rgb(1, 4, 30);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  z-index: 1000;
-  top: calc(100% + 5px);
-  left: 0;
-  min-width: 240px;
-  padding: 15px 0;
-  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  overflow: hidden;
-  height: 400px;
-  width: 250px;
-}
-
-/* Dropdown Links */
-.dropdown-content a {
-  display: block;
-  padding: 12px 25px;
-  color: #34495e;
-  font-size: 30px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
-.dropdown-content a:hover {
-  background-color: #f1f5f9;
-  color: #3b82f6;
-  padding-left: 30px;
+  .dropdown-content a {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+  }
 }
 
 /* Animation */
