@@ -1,0 +1,153 @@
+/* Global page structure */
+html, body {
+  height: 100%;
+  margin: 0;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #141313;
+}
+
+/* Container for the page */
+.learn-more-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero section */
+.learn-more-hero {
+  background-color: #00509e;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.learn-more-hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.learn-more-hero h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+/* Main content area */
+.learn-more-content {
+  flex: 1;
+  width: 100%;
+  max-width: 1400px; /* increase width to fill the screen more */
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Individual cards (sections) */
+.learn-more-content section {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effect */
+.learn-more-content section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings inside cards */
+.learn-more-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #00509e;
+}
+
+/* Text inside cards */
+.learn-more-content p,
+.learn-more-content ul {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Bullet lists */
+.learn-more-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+/* Call-to-action section */
+.cta-section {
+  background-color: #e0f0ff;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Contact button */
+.contact-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #00509e;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #003f7d;
+}
+
+/* Back button styling */
+.back-button {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.back-button a {
+  text-decoration: none;
+  color: #00509e;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.back-button a:hover {
+  color: #003f7d;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .learn-more-hero h1 {
+    font-size: 2rem;
+  }
+
+  .learn-more-content {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .learn-more-content section {
+    padding: 2rem;
+  }
+
+  .learn-more-content h2 {
+    font-size: 1.5rem;
+  }
+}
