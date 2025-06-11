@@ -28,10 +28,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-        <img src={Logo} alt="Nas-taj" className="Na-taj-logo" />
-      </div>
-
+       <div className="navbar-logo">
+    <Link to="/">
+      <img src={Logo} alt="Nas-taj" className="Na-taj-logo" />
+    </Link>
+  </div>
       <div className="menu-icon" onClick={toggleMobileMenu}>
         <i className={isMobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
       </div>
