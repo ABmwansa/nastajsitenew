@@ -90,9 +90,11 @@ const Navbar = () => {
               left: 0,
               minWidth: '150px'
             }}>
+              <div className="dropdown-career">
               <Link to="/internships" onClick={closeMenus}>Internships</Link>
               <Link to="/scholarships" onClick={closeMenus}>Scholarships</Link>
               <Link to="/jobs" onClick={closeMenus}>Job Openings</Link>
+              </div>
             </div>
           )}
         </div>
