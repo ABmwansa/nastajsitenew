@@ -7,11 +7,14 @@ import heroImage2 from '../assets/c.png';
 import heroImage3 from '../assets/construction-bg.jpg.jpeg.png'; 
 import commitmentImage from '../assets/commitment.PNG'; 
 import valuesImage from '../assets/imagexii.jpg';
-import missionImage from '../assets/society.jpg'; 
+import construction from '../assets/manufacturing.jpg'; 
 import Consultancy from '../assets/image4.jpg'; 
-import Manufacturing from '../assets/society.jpg'; 
+import Manufacturing from '../assets/fabrication.jpg'; 
 import nastajoffice from '../assets/imagexi.jpg'; 
 import whatsappLogo from '../assets/whatsapp.png';
+import cabinets from '../assets/kitchenFinish.jpg';
+import Tilling from '../assets/tilling.jpg';
+// import whatsappLogo from '../assets/whatsapp.png';
 import officespace from '../assets/construction-bg.jpg.jpeg.png';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -37,7 +40,7 @@ const [currentHero, setCurrentHero] = useState(0);
     {
       title: 'Our Mission',
       description: 'To build innovative and sustainable structures that stand the test of time.',
-      image: missionImage,
+      image: construction,
     },
   ];
 useEffect(() => {
@@ -128,7 +131,7 @@ useEffect(() => {
             <button className="Learn-more">Learn More</button>
           </div>
           <div className="service-card">
-            <img src={missionImage} alt="Mission" />
+            <img src={construction} alt="Mission" />
             <h3>Construction Implementation</h3>
             <p>Water Supply and Sanitation Infrastructure</p>
             <button className="Learn-more">Learn More</button>
@@ -143,6 +146,30 @@ useEffect(() => {
             <img src={Manufacturing} alt="Manufacturing" />
             <h3>Manufacturing</h3>
             <p>Providing top Quality Professional Consultancy and Supervising.</p>
+            <button className="Learn-more">Learn More</button>
+          </div>
+          <div className="service-card">
+            <img src={Manufacturing} alt="Manufacturing" />
+            <h3>Manufacturing</h3>
+            <p>Providing top Quality manufacturing of materials.</p>
+            <button className="Learn-more">Learn More</button>
+          </div>
+          <div className="service-card">
+            <img src={cabinets} alt="Manufacturing" />
+            <h3>Cabinet Installations</h3>
+            <p>Providing top Quality cabinet installations and manufacturing.</p>
+            <button className="Learn-more">Learn More</button>
+          </div>
+          <div className="service-card">
+            <img src={Tilling} alt="Manufacturing" />
+            <h3>Tilling</h3>
+            <p>Providing top QualityTilling and associated finishes.</p>
+            <button className="Learn-more">Learn More</button>
+          </div>
+          <div className="service-card">
+            <img src={Manufacturing} alt="Manufacturing" />
+            <h3>Doors and Windows Manufacturing</h3>
+            <p>Manufacturing of top quality doors and windows.</p>
             <button className="Learn-more">Learn More</button>
           </div>
         </div>
