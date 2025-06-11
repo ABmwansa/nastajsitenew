@@ -107,7 +107,9 @@ useEffect(() => {
         <div className="about-content">
           <h2>{slides[currentSlide].title}</h2>
           <p>{slides[currentSlide].description}</p>
-          <button className="learn-more-button" style={{ height: '50px', width: '200px' }}>Learn More</button>
+        <Link to="/EngineeringAndSupervision" className="Learn-more">
+  Learn More
+</Link>
         </div>
         <div className="about-image">
           <img src={slides[currentSlide].image} alt={slides[currentSlide].title} />
