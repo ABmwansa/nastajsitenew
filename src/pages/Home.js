@@ -163,7 +163,7 @@ useEffect(() => {
             <div className="project-card">
             <img src={Manufacturing} alt="Manufacturing" />
             <h3>Manufacturing</h3>
-            <p>Providing top Quality Professional Consultancy and Supervising.</p>
+            <p>Providing top Quality Manufacturing of Building Materials Such as doors, Windows etc</p>
             <button className="Learn-more">Learn More</button>
             </div>
           </div>
