@@ -6,6 +6,7 @@ import Projects from './pages/Projects';
 import Navbar from './pages/Navbar';
 import EngineeringAndSupervision from './pages/EngineeringAndSupervision';
 import OurTeam from './pages/OurTeam';
+
 // import Contact from './pages/Contact'
 
 function App() {

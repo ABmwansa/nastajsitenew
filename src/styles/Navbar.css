@@ -11,7 +11,7 @@
   z-index: 1000;
   flex-wrap: wrap;
   font-family: 'Segoe UI', sans-serif;
-  height: 200px;
+  /* height: 150px; */
 }
 
 /* Logo */
@@ -42,7 +42,7 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
