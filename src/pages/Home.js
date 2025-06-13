@@ -24,7 +24,7 @@ const Home = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const heroImages = [heroImage1, heroImage2, heroImage3]; 
 const [currentHero, setCurrentHero] = useState(0);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
    const contactRef = useRef(null);
    
 
