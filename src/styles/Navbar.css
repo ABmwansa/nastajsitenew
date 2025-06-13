@@ -11,6 +11,7 @@
   z-index: 1000;
   flex-wrap: wrap;
   font-family: 'Segoe UI', sans-serif;
+  height: 200px;
 }
 
 /* Logo */
@@ -41,7 +42,7 @@
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 
@@ -66,17 +67,17 @@
   color: white;
 }
 
-/* Dropdown content (main one with columns) */
+/* Main dropdown content (white version) */
 .dropdown-content-contained {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #070a0e; /* Dark blue */
+  background-color: white !important;
   width: 100%;
   max-width: 1000px;
-  max-height: 400px; /* Add max height */
-  overflow-y: auto;  /* Enable vertical scrolling */
+  max-height: 400px;
+  overflow-y: auto;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 2rem 3rem;
   border-radius: 12px;
@@ -87,11 +88,10 @@
   flex-direction: row;
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
-  scrollbar-width: thin;        /* For Firefox */
-  scrollbar-color: #888 #222;   /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #888 #fff;
 }
 
-/* Optional: Style the scrollbar for WebKit browsers */
 .dropdown-content-contained::-webkit-scrollbar {
   width: 8px;
 }
@@ -102,9 +102,8 @@
 }
 
 .dropdown-content-contained::-webkit-scrollbar-track {
-  background: #222;
+  background: #eee;
 }
-
 
 /* Show on hover for desktop */
 @media (hover: hover) and (pointer: fine) {
@@ -113,29 +112,25 @@
   }
 }
 
-.dropdown-career{
-  background-color: #001833;
-}
-
-/* Dropdown columns */
+/* Dropdown columns (white background, black text) */
 .dropdown-column {
   flex: 1 1 250px;
   min-width: 200px;
   display: flex;
   flex-direction: column;
-  background-color: #0a1119;
+  background-color: white;
 }
 
 .dropdown-column h4 {
   font-size: 1.25rem;
-  color: #ffffff;
+  color: #000;
   border-bottom: 2px solid #1e90ff;
   padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
 
 .dropdown-column a {
-  color: #cce6ff;
+  color: #000;
   text-decoration: none;
   font-size: 1rem;
   margin: 0.5rem 0;
@@ -151,7 +146,7 @@
 /* Career dropdown */
 .dropdown-content {
   position: absolute;
-  background-color: #002244;
+  background-color: white;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
   z-index: 1000;
@@ -166,7 +161,7 @@
 .dropdown-content a {
   display: block;
   padding: 0.75rem 1.5rem;
-  color: #cce6ff;
+  color: #000;
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
@@ -174,7 +169,7 @@
 }
 
 .dropdown-content a:hover {
-  background-color: #001833;
+  background-color: #f0f0f0;
   color: #1e90ff;
   padding-left: 2rem;
 }
@@ -230,9 +225,9 @@
     border-radius: 0;
     flex-direction: column;
     gap: 1.5rem;
-    background-color: #002244;
-      max-height: 400px; /* ✅ Limit height on mobile */
-    overflow-y: auto; 
+    background-color: white;
+    max-height: 400px;
+    overflow-y: auto;
   }
 
   .dropdown-content-contained.show {
@@ -241,14 +236,17 @@
 
   .dropdown-column {
     width: 100%;
+    background-color: white;
   }
 
   .dropdown-column h4 {
     font-size: 1.1rem;
+    color: #000;
   }
 
   .dropdown-column a {
     font-size: 0.95rem;
+    color: #000;
   }
 
   .dropdown-content {
@@ -257,5 +255,118 @@
     left: 0;
     min-width: 100%;
     border-radius: 0;
+    background-color: white;
+  }
+
+  .dropdown-content a {
+    color: #000;
+  }
+}
+.navbar-dropdown {
+  position: relative;
+}
+
+.navbar-dropbtn {
+  cursor: pointer;
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+}
+
+.navbar-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+color: #000;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  z-index: 999;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+   display: none;
+}
+
+.navbar-dropdown-content.show {
+  display: flex !important;
+   
+}
+
+.navbar-dropdown-column {
+  flex: 1 1 250px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.navbar-dropdown-column h4 {
+  font-size: 1.25rem;
+  color: #000;
+  border-bottom: 2px solid #1e90ff;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.navbar-dropdown-column a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  padding: 0.25rem 0;
+  transition: all 0.2s ease;
+}
+
+.navbar-dropdown-column a:hover {
+  color: #1e90ff;
+  transform: translateX(6px);
+}
+@media (max-width: 768px) {
+  .navbar-dropdown-content {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    box-shadow: none;
+    padding: 1rem 0;
+    border-radius: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: white;
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .navbar-dropdown-column {
+    width: 100%;
+    background-color: white;
+  }
+
+  .navbar-dropdown-column h4 {
+    font-size: 1.1rem;
+    color: #000;
+  }
+
+  .navbar-dropdown-column a {
+    font-size: 0.95rem;
+    color: #000;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .navbar-dropdown:hover .navbar-dropdown-content {
+    display: flex;
   }
 }
