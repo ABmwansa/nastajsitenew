@@ -2,7 +2,7 @@ import React from 'react';
 import directorImg from '../assets/director1.jpg';
 import managerImg from '../assets/generalManager.jpg';
 import supervisorImg from '../assets/supervisor.jpg';
-import logo from '../assets/log.jpg';
+import logo from '../assets/logo.jpg';
 import '../styles/OurTeam.css';
 const OurTeam = () => {
   return (
