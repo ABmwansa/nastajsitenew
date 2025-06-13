@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import {  Link } from 'react-router-dom';
 import '../styles/Home.css'; 
 import heroImage1 from '../assets/hero-bg.jpg'; 
 import heroImage2 from '../assets/c.png'; 
@@ -24,7 +24,7 @@ const Home = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
   const heroImages = [heroImage1, heroImage2, heroImage3]; 
 const [currentHero, setCurrentHero] = useState(0);
-  // const navigate = useNavigate();
+  
    const contactRef = useRef(null);
    
 
