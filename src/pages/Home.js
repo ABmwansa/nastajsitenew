@@ -26,6 +26,7 @@ const Home = () => {
 const [currentHero, setCurrentHero] = useState(0);
   const navigate = useNavigate();
    const contactRef = useRef(null);
+   
 
   const slides = [
     {
@@ -143,46 +144,60 @@ useEffect(() => {
 </Link>
           </div>
           <div className="service-card">
+            <div className="project-card">
             <img src={construction} alt="Mission" />
             <h3>Construction Implementation</h3>
             <p>Water Supply and Sanitation Infrastructure</p>
             <button className="Learn-more">Learn More</button>
+            </div>
           </div>
           <div className="service-card">
+            <div className="project-card">
             <img src={Consultancy} alt="Consultancy" />
             <h3>Consultancy</h3>
             <p>Providing top Quality Professional Consultancy and Supervising.</p>
             <button className="Learn-more">Learn More</button>
+            </div>
           </div>
           <div className="service-card">
+            <div className="project-card">
             <img src={Manufacturing} alt="Manufacturing" />
             <h3>Manufacturing</h3>
             <p>Providing top Quality Professional Consultancy and Supervising.</p>
             <button className="Learn-more">Learn More</button>
+            </div>
           </div>
           <div className="service-card">
+            <div className="project-card">
             <img src={Manufacturing} alt="Manufacturing" />
             <h3>Manufacturing</h3>
             <p>Providing top Quality manufacturing of materials.</p>
             <button className="Learn-more">Learn More</button>
+           </div>
           </div>
           <div className="service-card">
+            <div className="project-card">
             <img src={cabinets} alt="Manufacturing" />
             <h3>Cabinet Installations</h3>
             <p>Providing top Quality cabinet installations and manufacturing.</p>
             <button className="Learn-more">Learn More</button>
+            </div>
           </div>
           <div className="service-card">
+            <div className="project-card">
             <img src={Tilling} alt="Manufacturing" />
             <h3>Tilling</h3>
             <p>Providing top QualityTilling and associated finishes.</p>
             <button className="Learn-more">Learn More</button>
+            </div>
           </div>
           <div className="service-card">
+            <div className="project-card">
             <img src={Manufacturing} alt="Manufacturing" />
             <h3>Doors and Windows Manufacturing</h3>
             <p>Manufacturing of top quality doors and windows.</p>
             <button className="Learn-more">Learn More</button>
+            </div>
           </div>
         </div>
       </section>
@@ -193,11 +208,11 @@ useEffect(() => {
         <div className="projects-grid">
           <div className="project-card">
             <img src={commitmentImage} alt="Project 1" />
-            <p>Warma Laboratory</p>
+            <p>WARMA LABORATORY FUNDED BY UNDP</p>
           </div>
           <div className="project-card">
             <img src={nastajoffice} alt="Project 2" />
-            <p>Nas-taj Offices</p>
+            <p>NAS-TAJ OFFICES AND APPARTMENTS, ROMA</p>
           </div>
           <div className="project-card">
             <img src={officespace} alt="Project 3" />

@@ -40,7 +40,7 @@ const Navbar = () => {
       <ul className={isMobileMenuOpen ? "navbar-links active" : "navbar-links"}>
         <li><Link to="/" onClick={closeMenus}>Home</Link></li>
         <li><Link to="/projects" onClick={closeMenus}>Projects</Link></li>
-        <li><Link to="/team" onClick={closeMenus}>Our Team</Link></li>
+        <li><Link to="/OurTeam" onClick={closeMenus}>Our Team</Link></li>
 
         {/* Products & Services Dropdown */}
         <li className="dropdown">
@@ -81,16 +81,8 @@ const Navbar = () => {
         >
           <span className="dropbtn">Career</span>
           {isHovered && (
-            <div className="dropdown-content" style={{
-              display: 'block',
-              position: 'absolute',
-              backgroundColor: '#fff',
-              boxShadow: '0 4px 8px rgba(0,0,0,0.2)',
-              zIndex: 1000,
-              top: '100%',
-              left: 0,
-              minWidth: '150px'
-            }}>
+            <div className="dropdown-content" 
+           >
               <div className="dropdown-career">
               <Link to="/internships" onClick={closeMenus}>Internships</Link>
               <Link to="/scholarships" onClick={closeMenus}>Scholarships</Link>

@@ -5,6 +5,7 @@ import ProductsAndServices from './pages/ProductsAndServices';
 import Projects from './pages/Projects';
 import Navbar from './pages/Navbar';
 import EngineeringAndSupervision from './pages/EngineeringAndSupervision';
+import OurTeam from './pages/OurTeam';
 // import Contact from './pages/Contact'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/projects" element={<Projects />} /> 
         <Route path="/ProductsAndServices" element={<ProductsAndServices />} />
         <Route path="/EngineeringAndSupervision" element={<EngineeringAndSupervision />} />
+        <Route path="/OurTeam" element={<OurTeam />} />
         {/* <Route path="/contact" element={<Contact />} />  */}
       </Routes> 
     </BrowserRouter>

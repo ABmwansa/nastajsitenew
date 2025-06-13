@@ -72,10 +72,12 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #002244; /* Dark blue */
+  background-color: #070a0e; /* Dark blue */
   width: 100%;
   max-width: 1000px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  max-height: 400px; /* Add max height */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   padding: 2rem 3rem;
   border-radius: 12px;
   z-index: 999;
@@ -85,7 +87,24 @@
   flex-direction: row;
   margin-top: 10px;
   transition: all 0.3s ease-in-out;
+  scrollbar-width: thin;        /* For Firefox */
+  scrollbar-color: #888 #222;   /* For Firefox */
 }
+
+/* Optional: Style the scrollbar for WebKit browsers */
+.dropdown-content-contained::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-content-contained::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.dropdown-content-contained::-webkit-scrollbar-track {
+  background: #222;
+}
+
 
 /* Show on hover for desktop */
 @media (hover: hover) and (pointer: fine) {
@@ -104,7 +123,7 @@
   min-width: 200px;
   display: flex;
   flex-direction: column;
-  background-color: #001833;
+  background-color: #0a1119;
 }
 
 .dropdown-column h4 {
