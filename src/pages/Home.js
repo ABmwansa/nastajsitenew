@@ -155,7 +155,7 @@ useEffect(() => {
             <div className="project-card">
             <img src={Consultancy} alt="Consultancy" />
             <h3>Consultancy</h3>
-            <p>Providing top Quality Professional Consultancy and Supervising.</p>
+            <p>Providing top Quality Professional Consultancy and Supervision</p>
             <button className="Learn-more">Learn More</button>
             </div>
           </div>
