@@ -80,9 +80,9 @@ useEffect(() => {
     setIsFormVisible(!isFormVisible);
   };
 
-  const handleClick = () => {
-    navigate('/contact');
-  };
+  // const handleClick = () => {
+  //   navigate('/contact');
+  // };
 
   return (
     <div className="home">
