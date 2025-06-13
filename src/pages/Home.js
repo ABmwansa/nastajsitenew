@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import '../styles/Home.css'; 
 import heroImage1 from '../assets/hero-bg.jpg'; 
@@ -25,6 +25,7 @@ const Home = () => {
   const heroImages = [heroImage1, heroImage2, heroImage3]; 
 const [currentHero, setCurrentHero] = useState(0);
   const navigate = useNavigate();
+   const contactRef = useRef(null);
 
   const slides = [
     {
@@ -43,6 +44,11 @@ const [currentHero, setCurrentHero] = useState(0);
       image: construction,
     },
   ];
+
+   const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
 useEffect(() => {
   const interval = setInterval(() => {
     setCurrentHero((prev) => (prev + 1) % heroImages.length);
@@ -94,7 +100,9 @@ useEffect(() => {
     <p style={{ color: 'white', fontSize: '2rem' }}>
       Quality construction services tailored to your needs.
     </p>
-    <button className="cta-button" onClick={handleClick}>Contact Us</button>
+ <button className="contact-button" onClick={scrollToContact}>
+        Contact Us
+      </button>
   </div>
 </section>
 
@@ -230,8 +238,8 @@ useEffect(() => {
 
       {/* Contact Section */}
       <section className="contact-section">
-        <h2>Contact Us</h2>
-        <button className="contact-button" onClick={toggleForm}>Contact Us</button>
+        <h2>Leave a Message</h2>
+        <button className="contact-button" onClick={toggleForm}>Click  here to leave a message</button>
         {isFormVisible && (
           <form className="contact-form">
             <input type="text" placeholder="Your Name" required />
@@ -243,7 +251,7 @@ useEffect(() => {
       </section>
 
       {/* Footer Section */}
-      <footer className="footer">
+      <footer ref={contactRef} className="footer">
         <div className="footer-container">
           <div className="footer-left">
             <h2>Nas-Taj</h2>
