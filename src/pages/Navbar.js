@@ -72,16 +72,16 @@ const Navbar = () => {
             <div className="navbar-dropdown-column">
               <h4>Construction</h4>
               <Link to="/fabrication" onClick={closeMenus}>
-                <i className="fas fa-hammer" style={{ marginRight: '8px' }}></i>Fabrication
+                <i className="fas fa-hammer" style={{ marginRight: '8px' }}></i>Roads, Bridges and Drainage infrastructure
               </Link>
               <Link to="/tiling" onClick={closeMenus}>
-                <i className="fas fa-th-large" style={{ marginRight: '8px' }}></i>Tiling
+                <i className="fas fa-th-large" style={{ marginRight: '8px' }}></i>Buildings and Inductrial infrastructure
               </Link>
               <Link to="/painting" onClick={closeMenus}>
-                <i className="fas fa-paint-roller" style={{ marginRight: '8px' }}></i>Painting
+                <i className="fas fa-paint-roller" style={{ marginRight: '8px' }}></i>Dams and irrigation infrastructure
               </Link>
               <Link to="/cabinet-installations" onClick={closeMenus}>
-                <i className="fas fa-warehouse" style={{ marginRight: '8px' }}></i>Cabinet Installations
+                <i className="fas fa-warehouse" style={{ marginRight: '8px' }}></i>Technical designs and Drawings
               </Link>
               <Link to="/scheming" onClick={closeMenus}>
                 <i className="fas fa-pencil-ruler" style={{ marginRight: '8px' }}></i>Scheming
