@@ -71,37 +71,37 @@ const Navbar = () => {
           <div className={`navbar-dropdown-content ${isProductDropdownOpen ? 'show' : ''}`}>
             <div className="navbar-dropdown-column">
               <h4>Construction</h4>
-              <Link to="/fabrication" onClick={closeMenus}>
-                <i className="fas fa-hammer" style={{ marginRight: '8px' }}></i>Roads, Bridges and Drainage infrastructure
+              <Link style ={{color:'black'}} to="/fabrication" onClick={closeMenus}>
+                <i className="fas fa-hammer" style={{ marginRight: '8px', color: 'black' }}></i >Roads, Bridges and Drainage infrastructure
               </Link>
-              <Link to="/tiling" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/tiling" onClick={closeMenus}>
                 <i className="fas fa-th-large" style={{ marginRight: '8px' }}></i>Buildings and Inductrial infrastructure
               </Link>
-              <Link to="/painting" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/painting" onClick={closeMenus}>
                 <i className="fas fa-paint-roller" style={{ marginRight: '8px' }}></i>Dams and irrigation infrastructure
               </Link>
-              <Link to="/cabinet-installations" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/cabinet-installations" onClick={closeMenus}>
                 <i className="fas fa-warehouse" style={{ marginRight: '8px' }}></i>Technical designs and Drawings
               </Link>
-              <Link to="/scheming" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/scheming" onClick={closeMenus}>
                 <i className="fas fa-pencil-ruler" style={{ marginRight: '8px' }}></i>Scheming
               </Link>
             </div>
             <div className="navbar-dropdown-column">
               <h4>Professional</h4>
-              <Link to="/consultancy" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/consultancy" onClick={closeMenus}>
                 <i className="fas fa-comments" style={{ marginRight: '8px' }}></i>Consultancy
               </Link>
-              <Link to="/project-management" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/project-management" onClick={closeMenus}>
                 <i className="fas fa-tasks" style={{ marginRight: '8px' }}></i>Project Management
               </Link>
             </div>
             <div className="navbar-dropdown-column">
               <h4>Testing & Manufacturing</h4>
-              <Link to="/manufacturing" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/manufacturing" onClick={closeMenus}>
                 <i className="fas fa-industry" style={{ marginRight: '8px' }}></i>Manufacturing
               </Link>
-              <Link to="/concrete-testing" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/concrete-testing" onClick={closeMenus}>
                 <i className="fas fa-vials" style={{ marginRight: '8px' }}></i>Concrete Testing
               </Link>
             </div>
