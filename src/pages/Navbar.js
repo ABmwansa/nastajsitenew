@@ -65,8 +65,9 @@ const Navbar = () => {
           onMouseEnter={() => window.innerWidth > 768 && setIsProductDropdownOpen(true)}
           onMouseLeave={() => window.innerWidth > 768 && setIsProductDropdownOpen(false)}
         >
-          <span className="navbar-dropbtn" onClick={toggleProductDropdown}>
-            Our Products & Services
+          <span className="navbar-dropbtn" onClick={toggleProductDropdown} style={{ color: 'white' }}>
+              <i className="fas fa-toolbox" style={{ marginRight: '8px', color: 'white' }}></i>
+              Our Products & Services
           </span>
           <div className={`navbar-dropdown-content ${isProductDropdownOpen ? 'show' : ''}`}>
             <div className="navbar-dropdown-column">
@@ -88,12 +89,12 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="navbar-dropdown-column">
-              <h4>Professional</h4>
+              <h4 style={{color:'blue'}}>Professional</h4>
               <Link style ={{color:'black'}}  to="/consultancy" onClick={closeMenus}>
                 <i className="fas fa-comments" style={{ marginRight: '8px' }}></i>Consultancy
               </Link>
               <Link style ={{color:'black'}}  to="/project-management" onClick={closeMenus}>
-                <i className="fas fa-tasks" style={{ marginRight: '8px' }}></i>Project Management
+                <i className="fas fa-tasks" style={{ marginRight: '8px', color: 'yellow' }}></i>Project Management
               </Link>
             </div>
             <div className="navbar-dropdown-column">
@@ -115,12 +116,15 @@ const Navbar = () => {
           onMouseLeave={() => setIsHovered(false)}
           style={{ position: 'relative' }}
         >
-          <span className="dropbtn">Career</span>
+         <span className="dropbtn" style={{ color: 'white' }}>
+            <i className="fas fa-briefcase" style={{ marginRight: '8px', color: 'yellow' }}></i>
+            Career
+          </span>
           {isHovered && (
             <div className="dropdown-content">
               <div className="dropdown-career">
                 <Link to="/internships" onClick={closeMenus}>
-                  <i className="fas fa-briefcase" style={{ marginRight: '8px' }}></i>Internships
+                  <i className="fas fa-briefcase" style={{ marginRight: '8px', }}></i>Internships
                 </Link>
                 <Link to="/scholarships" onClick={closeMenus}>
                   <i className="fas fa-graduation-cap" style={{ marginRight: '8px' }}></i>Scholarships
