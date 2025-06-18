@@ -1,0 +1,200 @@
+.scholarships-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.scholarships-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.scholarships-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #333;
+  padding: 0 10px;
+}
+
+.scholarship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.scholarship-card {
+  background-color: #f0f8ff;
+  border-left: 5px solid #004080;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.scholarship-card:hover {
+  transform: translateY(-5px);
+  background-color: #ffffff;
+}
+
+.scholarship-card h3 {
+  color: #004080;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.scholarship-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.apply-btn {
+  background-color: #004080;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: #002c5f;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .scholarships-heading {
+    font-size: 2rem;
+  }
+
+  .apply-btn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .scholarships-heading {
+    font-size: 1.7rem;
+  }
+
+  .scholarships-intro {
+    font-size: 1rem;
+  }
+
+  .scholarship-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .scholarship-card p {
+    font-size: 0.9rem;
+  }
+}
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content Box */
+.modal-content {
+  background-color: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+/* Headings and Paragraphs */
+.modal-content h2 {
+  color: #004080;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.modal-content a {
+  color: #004080;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Close Button */
+.close-btn {
+  background-color: #004080;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+  background-color: #002c5f;
+}
+
+/* Not Available Hover Style */
+.not-available {
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Text */
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .modal-content p {
+    font-size: 0.95rem;
+  }
+
+  .close-btn {
+    width: 100%;
+  }
+}

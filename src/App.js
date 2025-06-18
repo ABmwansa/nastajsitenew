@@ -6,6 +6,9 @@ import Projects from './pages/Projects';
 import Navbar from './pages/Navbar';
 import EngineeringAndSupervision from './pages/EngineeringAndSupervision';
 import OurTeam from './pages/OurTeam';
+import Internships from './pages/Internships';
+import Scholarships from './pages/Scholarships';
+import Jobs from './pages/Jobs';
 
 // import Contact from './pages/Contact'
 
@@ -19,6 +22,9 @@ function App() {
         <Route path="/ProductsAndServices" element={<ProductsAndServices />} />
         <Route path="/EngineeringAndSupervision" element={<EngineeringAndSupervision />} />
         <Route path="/OurTeam" element={<OurTeam />} />
+        <Route path="/internships" element={<Internships />} />
+        <Route path="/scholarships" element={<Scholarships />} />
+        <Route path="/jobs" element={<Jobs />} />
         {/* <Route path="/contact" element={<Contact />} />  */}
       </Routes> 
     </BrowserRouter>

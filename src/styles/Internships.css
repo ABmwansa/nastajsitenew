@@ -1,0 +1,104 @@
+.internship-container {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.internship-heading {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #004080;
+  margin-bottom: 20px;
+}
+
+.internship-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #333;
+  padding: 0 10px;
+}
+
+.internship-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.internship-card {
+  background-color: #f9f9f9;
+  border-left: 5px solid #004080;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.internship-card:hover {
+  transform: translateY(-5px);
+  background-color: #fff;
+}
+
+.internship-card h3 {
+  color: #004080;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.internship-card p {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.apply-btn {
+  background-color: #004080;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s;
+}
+
+.apply-btn:hover {
+  background-color: #002c5f;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+  .internship-heading {
+    font-size: 2rem;
+  }
+
+  .internship-card {
+    padding: 15px;
+  }
+
+  .apply-btn {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .internship-heading {
+    font-size: 1.7rem;
+  }
+
+  .internship-intro {
+    font-size: 1rem;
+  }
+
+  .internship-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .internship-card p {
+    font-size: 0.9rem;
+  }
+}
