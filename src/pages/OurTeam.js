@@ -4,67 +4,92 @@ import managerImg from '../assets/generalManager.jpg';
 import supervisorImg from '../assets/supervisor.jpg';
 import logo from '../assets/logo.jpg';
 import '../styles/OurTeam.css';
+
 const OurTeam = () => {
   return (
-    <div className="our-team-container">
+    <div className="our-team">
       <header className="team-header">
-        <img src={logo} alt="Company Logo" className="team-logo" />
+        <img src={logo} alt="Company Logo" className="logo" />
         <h1>Meet Our Team</h1>
-        <p>Our strength lies in our people — experienced professionals leading with vision and excellence.</p>
+        <p>Our strength lies in experienced professionals leading with vision and excellence.</p>
       </header>
 
-      <section className="team-section">
-  <div className="team-card">
-    <img src={directorImg} alt="Director" />
-    <h2>Eng. Nahum Stackson Jere</h2>
-    <h4>Managing Director</h4>
-    <p>
-      With over 20 years of industry leadership, Eng. Jere oversees all operational and strategic initiatives,
-      ensuring the company remains a beacon of quality and trust in engineering and construction.
-    </p>
-    <p><strong>Qualifications:</strong><br />
-      BSc in Civil and Mechanical Engineering, University of Zambia<br />
-      MSc in Structural Engineering
-    </p>
-  </div>
+      {/* Leadership Section */}
+      <section>
+        <h2 className="section-title">Leadership</h2>
+        <div className="team-grid">
+          <div className="team-card">
+            <img src={directorImg} alt="Director" />
+            <h3>Eng. Nahum Stackson Jere</h3>
+            <p className="role">Managing Director</p>
+            <p>20+ years of leadership in construction and engineering.</p>
+            <p><strong>Qualifications:</strong><br />BSc Civil & Mechanical Eng., MSc Structural Eng.</p>
+          </div>
+          <div className="team-card">
+  {/* <img src={directorImg} alt="Director" /> */}
+  <h3>Ms Monde Nyambe</h3>
+  <p className="role">Director</p>
+  <p>20+ years of leadership in construction and engineering.</p>
+  <p>
+    <strong>Qualifications:</strong><br />
+    BSc Civil & Mechanical Engineering, MSc Structural Engineering
+  </p>
+</div>
+        </div>
+      </section>
 
-  <div className="team-card">
-    <img src={managerImg} alt="Project Manager" />
-    <h2>Ms Nsamwa Chaibela</h2>
-    <h4>General Manager</h4>
-    <p>
-      Nsamwa brings a decade of experience in project execution, stakeholder coordination, and quality control.
-      Her leadership ensures projects are delivered on time and to specification.
-    </p>
-    <p><strong>Qualifications:</strong><br />
-      BSc in Business Administration (Economics Minor), University of Zambia
-    </p>
-  </div>
+      {/* Admin Section */}
+      <section>
+        <h2 className="section-title">Administration</h2>
+        <div className="team-grid">
+          <div className="team-card">
+            <img src={managerImg} alt="General Manager" />
+            <h3>Ms Nsamwa Chaibela</h3>
+            <p className="role">General Manager</p>
+            <p>Expert in project execution and stakeholder coordination.</p>
+            <p><strong>Qualifications:</strong><br />BSc Business Admin (UNZA)</p>
+          </div>
+          <div className="team-card">
+            <img src={supervisorImg} alt="Senior Supervisor" />
+            <h3>Mr. Amos Mwansa</h3>
+            <p className="role">Senior Site Supervisor</p>
+            <p>Oversees on-site activities and safety compliance.</p>
+            <p><strong>Qualifications:</strong><br />BSc Software Eng., Cert. in Project Management & Safety</p>
+          </div>
+        </div>
+      </section>
 
-  <div className="team-card">
-    <img src={supervisorImg} alt="Site Supervisor" />
-    <h2>Mr. Amos Mwansa</h2>
-    <h4>Senior Site Supervisor</h4>
-    <p>
-      Amos oversees all on-site activities, workforce supervision, and safety compliance, ensuring our standards
-      are upheld throughout the construction phase.
-    </p>
-    <p><strong>Qualifications:</strong><br />
-      BSc in Software Engineering<br />
-      Certificates in Project Management and Occupational Health & Safety, University of Zambia
-    </p>
-  </div>
-</section>
+      {/* Supervisors & Interns */}
+      <section>
+        <h2 className="section-title">Supervisors & Intern Architects</h2>
+        <div className="team-grid">
+          {[
+            'Salifyanji',
+            'Henshel Chongo',
+            'Kalaluka Mubita',
+            'Carine Ngabile',
+            'Chembe Pomboloka',
+            'Mybin',
+            'Iforce Mwenda',
+            'Abraham Nyambe'
+          ].map((name, index) => (
+            <div className="team-card" key={index}>
+              <h3>{name}</h3>
+              <p className="role">{index < 4 ? 'Student Architect' : 'Supervisor'}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-
-      <section className="structure-section">
-        <h2>Company Management Structure</h2>
-        <ul className="structure-list">
-          <li><strong>Managing Director</strong> → Executive oversight and strategic decision-making</li>
-          <li><strong>Project Managers</strong> → Project planning, monitoring, and client coordination</li>
-          <li><strong>Site Engineers</strong> → Daily technical management and implementation</li>
-          <li><strong>Supervisors</strong> → On-ground execution, worker management, safety checks</li>
-          <li><strong>Support Staff</strong> → Procurement, logistics, admin and quality assurance</li>
+      {/* Structure Summary */}
+      <section className="structure">
+        <h2 className="section-title">Company Management Structure</h2>
+        <ul>
+          <li><strong>Managing Director</strong> → Executive oversight</li>
+          <li><strong>Project Managers</strong> → Planning & client coordination</li>
+          <li><strong>Site Engineers</strong> → Technical implementation</li>
+          <li><strong>Supervisors</strong> → Site management & safety</li>
+          <li><strong>Support Staff</strong> → Procurement, logistics, admin</li>
         </ul>
       </section>
     </div>
