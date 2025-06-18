@@ -72,21 +72,21 @@ const Navbar = () => {
           <div className={`navbar-dropdown-content ${isProductDropdownOpen ? 'show' : ''}`}>
             <div className="navbar-dropdown-column">
               <h4>Construction</h4>
-              <Link style ={{color:'black'}} to="/fabrication" onClick={closeMenus}>
+              <Link style ={{color:'black'}} to="/EngineeringAndSupervision" onClick={closeMenus}>
                 <i className="fas fa-hammer" style={{ marginRight: '8px', color: 'black' }}></i >Roads, Bridges and Drainage infrastructure
               </Link>
-              <Link style ={{color:'black'}}  to="/tiling" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/EngineeringAndSupervision" onClick={closeMenus}>
                 <i className="fas fa-th-large" style={{ marginRight: '8px' }}></i>Buildings and Inductrial infrastructure
               </Link>
-              <Link style ={{color:'black'}}  to="/painting" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/EngineeringAndSupervision" onClick={closeMenus}>
                 <i className="fas fa-paint-roller" style={{ marginRight: '8px' }}></i>Dams and irrigation infrastructure
               </Link>
-              <Link style ={{color:'black'}}  to="/cabinet-installations" onClick={closeMenus}>
+              <Link style ={{color:'black'}}  to="/EngineeringAndSupervision" onClick={closeMenus}>
                 <i className="fas fa-warehouse" style={{ marginRight: '8px' }}></i>Technical designs and Drawings
               </Link>
-              <Link style ={{color:'black'}}  to="/scheming" onClick={closeMenus}>
+              {/* <Link style ={{color:'black'}}  to="/scheming" onClick={closeMenus}>
                 <i className="fas fa-pencil-ruler" style={{ marginRight: '8px' }}></i>Scheming
-              </Link>
+              </Link> */}
             </div>
             <div className="navbar-dropdown-column">
               <h4 style={{color:'blue'}}>Professional</h4>
