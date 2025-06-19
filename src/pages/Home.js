@@ -2,14 +2,14 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {  Link } from 'react-router-dom';
 import '../styles/Home.css'; 
-import heroImage1 from '../assets/hero-bg.jpg'; 
-import heroImage2 from '../assets/c.png'; 
+import heroImage1 from '../assets/here-bg.jpg'; 
+import heroImage2 from '../assets/c.jpg'; 
 import heroImage3 from '../assets/construction-bg.jpg.jpeg.png'; 
 import commitmentImage from '../assets/commitment.PNG'; 
 import valuesImage from '../assets/imagexii.jpg';
 import construction from '../assets/manufacturing.jpg'; 
 import Consultancy from '../assets/image4.jpg'; 
-import Manufacturing from '../assets/fabrication.jpg'; 
+import Manufacturing from '../assets/eu3.jpg'; 
 import nastajoffice from '../assets/imagexi.jpg'; 
 import whatsappLogo from '../assets/whatsapp.png';
 import cabinets from '../assets/kitchenFinish.jpg';
