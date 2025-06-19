@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Assuming you're using React Router
-import valuesImage from '../assets/values.jpg'; // Adjust path as needed
+import valuesImage from '../assets/c.jpg'; // Adjust path as needed
 import '../styles/EngineeringAndSupervision.css'; 
 
 
