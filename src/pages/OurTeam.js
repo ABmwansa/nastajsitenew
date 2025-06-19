@@ -131,7 +131,7 @@ const OurTeam = () => {
           <div className="team-card">
   <img src={supervisorImg} alt="Senior Site Supervisor" />
   <h3>Mr. Amos Mwansa</h3>
-  <p className="role">Senior Site Supervisor</p>
+  <p className="role"> Site Supervisor</p>
   <p>
     Oversees on-site activities, ensuring compliance with safety standards and effective execution of construction tasks.
   </p>
