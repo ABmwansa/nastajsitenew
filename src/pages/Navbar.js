@@ -30,11 +30,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">
-  <Link to="/">
-    <img src={Logo} alt="Nas-taj" className="Na-taj-logo" />
+     <div className="navbar-branding">
+  <Link to="/" className="logo-link">
+    <img src={Logo} alt="Nas-Taj Logo" className="Na-taj-logo" />
+    <span className="company-name">Nas-Taj Infrastructure Services Ltd.</span>
   </Link>
-  <span className="mobile-company-name">Nas-Taj Infrastructure Services Ltd.</span>
 </div>
 
 
