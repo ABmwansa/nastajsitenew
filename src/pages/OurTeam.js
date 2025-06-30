@@ -153,17 +153,17 @@ const OurTeam = () => {
         <div className="team-grid">
           {[
             'Salifyanji',
-            'Henshel Chongo',
-            'Kalaluka Mubita',
-            'Carine Ngabile',
-            'Chembe Pomboloka',
-            'Mybin',
-            'Iforce Mwenda',
-            'Abraham Nyambe'
+            // 'Henshel Chongo',
+            // 'Kalaluka Mubita',
+            // 'Carine Ngabile',
+            // 'Chembe Pomboloka',
+            // 'Mybin',
+            // 'Iforce Mwenda',
+            // 'Abraham Nyambe'
           ].map((name, index) => (
             <div className="team-card" key={index}>
               <h3>{name}</h3>
-              <p className="role">{index < 4 ? 'Student Architect' : 'Supervisor'}</p>
+              <p className="role">{index < 4 ? 'CAD Technician' : 'Supervisor'}</p>
             </div>
           ))}
         </div>
