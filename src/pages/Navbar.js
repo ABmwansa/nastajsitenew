@@ -31,14 +31,22 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <Link to="/">
-          <img src={Logo} alt="Nas-taj" className="Na-taj-logo" />
-        </Link>
-      </div>
+  <Link to="/">
+    <img src={Logo} alt="Nas-taj" className="Na-taj-logo" />
+  </Link>
+  <span className="mobile-company-name">Nas-Taj Infrastructure Services Ltd.</span>
+</div>
 
-      <div className="menu-icon" onClick={toggleMobileMenu}>
-        <i className={isMobileMenuOpen ? "fas fa-times" : "fas fa-bars"}></i>
-      </div>
+
+      <div
+  className={`menu-icon ${isMobileMenuOpen ? 'open' : ''}`}
+  onClick={toggleMobileMenu}
+>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
 
       <ul className={isMobileMenuOpen ? "navbar-links active" : "navbar-links"}>
     <li>
