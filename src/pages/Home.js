@@ -8,6 +8,7 @@ import heroImage3 from '../assets/construction-bg.jpg.jpeg.png';
 import commitmentImage from '../assets/commitment.PNG'; 
 import valuesImage from '../assets/imagexii.jpg';
 import construction from '../assets/manufacturing.jpg'; 
+import tennis from '../assets/tennis.jpg'; 
 import Consultancy from '../assets/image4.jpg'; 
 import Manufacturing from '../assets/eu3.jpg'; 
 import nastajoffice from '../assets/imagexi.jpg'; 
@@ -159,14 +160,15 @@ useEffect(() => {
             <button className="Learn-more">Learn More</button>
             </div>
           </div>
-          <div className="service-card">
-            <div className="project-card">
-            <img src={Manufacturing} alt="Manufacturing" />
-            <h3>Manufacturing</h3>
-            <p>Providing top Quality Manufacturing of Building Materials Such as doors, Windows etc</p>
+         <div className="service-card">
+          <div className="project-card">
+            <img src={tennis} alt="Tennis Court Construction" />
+            <h3>Tennis Court Construction & Refurbishment</h3>
+            <p>Expert design, construction, and renovation of high-quality tennis courts, ensuring top performance and durability.</p>
             <button className="Learn-more">Learn More</button>
-            </div>
           </div>
+        </div>
+
           <div className="service-card">
             <div className="project-card">
             <img src={Manufacturing} alt="Manufacturing" />
