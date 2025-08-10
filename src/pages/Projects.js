@@ -9,6 +9,8 @@ import cbu from '../assets/cbu.png';
 import emarald from '../assets/emarald.png'; 
 import mandevu from '../assets/mandevu.png'; 
 import Apex from '../assets/apex.png'; 
+import companyProfile from '../assets/company-profile.pptm';
+
 
 
 
@@ -205,6 +207,11 @@ const Projects = () => {
   return (
     <div className="projects-wrapper">
       <h1 className="projects-title">Our Projects</h1>
+      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+    <a href={companyProfile} download="Nas-Taj_Company_Profile.pdf">
+      <button className="download-btn">📄 Download Company Profile</button>
+    </a>
+  </div>
       <div className="tab-buttons">
         <button onClick={() => handleTabClick('current')} className={activeTab === 'current' ? 'active' : ''}>Current Projects</button>
         <button onClick={() => handleTabClick('complete')} className={activeTab === 'complete' ? 'active' : ''}>Completed Projects</button>

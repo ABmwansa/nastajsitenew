@@ -270,6 +270,42 @@
   background-color: #0056b3;
 }
 
+/* Button container for centering */
+.download-btn-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Main button styling */
+.download-btn {
+  display: inline-block;
+  background-color: #0077b6;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.download-btn:hover {
+  background-color: #005f8a;
+  transform: scale(1.05);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .download-btn {
+    width: 90%;
+    padding: 14px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
 
 
 
